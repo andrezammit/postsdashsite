@@ -39,13 +39,13 @@
             <div class="infoPanel">
                 <h1 class="infoText">Show tweets in a tiled layout and watch them automatically update!</h1>
                 <div class="installButton">Install</div>
-                <div class="otherBrowsersLink">Other browsers</div>
+                <a class="otherBrowsersLink" href="#browsers">Other browsers</a>
             </div>
             <div class="screenshotPanel">
                 <img class="screenshot" src="images/screenshot.png">
             </div>
         </div>
-        <div class="featuresContainer">
+        <div class="featureContainer">
             <div class="feature">
                 <svg class="featureIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-columns">
@@ -61,8 +61,8 @@
                     <polyline points="1 20 1 14 7 14"></polyline>
                     <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
                 </svg>
-                <div class="featureTitle">Real-Time Updates</div>
-                <div class="featureText">Stay in the loop with automatic feed refreshing, ensuring you never miss the latest tweets.</div>
+                <h2 class="featureTitle">Real-Time Updates</h2>
+                <h3 class="featureText">Stay in the loop with automatic feed refreshing, ensuring you never miss the latest tweets.</h3>
             </div>
             <div class="feature">
                 <svg class="featureIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -76,18 +76,40 @@
                     <line x1="17" y1="17" x2="22" y2="17"></line>
                     <line x1="17" y1="7" x2="22" y2="7"></line>
                 </svg>
-                <div class="featureTitle">Multimedia Integration</div>
-                <div class="featureText">Enjoy an enhanced media viewing experience as images, videos, and GIFs are seamlessly integrated into the tiled layout.</div>
+                <h2 class="featureTitle">Multimedia Integration</h2>
+                <h3 class="featureText">Enjoy an enhanced media viewing experience as images, videos, and GIFs are seamlessly integrated into the tiled layout.</h3>
             </div>
         </div>
-        <h1>Browsers</h1>
-        <div class="browserContainer">
-            <img class="browserIcon" src="images/chrome.svg">
-            <img class="browserIcon" src="images/firefox.svg">
-            <img class="browserIcon" src="images/edge.svg">
+        <div id="browsers" class="browserContainer">
+            <div class="feature">
+                <svg class="featureIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <h2 class="featureTitle">Supported Browsers</h2>
+                <h3 class="featureText">Install PostsDash for your browser.</h3>
+            </div>
+            <div class="feature centeredIcons">
+                <img class="browserIcon" src="images/chrome.svg">
+                <img class="browserIcon" src="images/firefox.svg">
+                <img class="browserIcon" src="images/edge.svg">
+            </div>
         </div>
-        <h1>Social</h1>
-        <div class="socialContainer">
+        <div id="social" class="socialContainer">
+            <div class="feature">
+                <svg class="featureIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <h2 class="featureTitle">Follow PostsDash</h2>
+            </div>
+            <div class="feature centeredIcons">
+                <img class="browserIcon" src="images/chrome.svg">
+                <img class="browserIcon" src="images/firefox.svg">
+                <img class="browserIcon" src="images/edge.svg">
+            </div>
         </div>
         <div class="bottomSpacer"></div>
     </div>
