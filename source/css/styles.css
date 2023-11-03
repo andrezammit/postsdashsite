@@ -16,7 +16,7 @@ body {
 }
 
 .contentArea {
-    width: 40%;
+    width: 55%;
     display: flex;
     margin: 0px auto;
     flex-direction: column;
@@ -30,7 +30,7 @@ body {
     display: flex;
     width: 100%;
     cursor: default;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     flex-direction: row;
     justify-content: center;
     font-family: 'logofont';
@@ -61,18 +61,6 @@ body {
     justify-content: center;
 }
 
-.installButton {
-    display: flex;
-    height: 75px;
-    font-size: 25px;
-    padding: 0 25px;
-    width: fit-content;
-    border-radius: 15px;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 120, 147, 1);
-}
-
 .browserContainer {
     display: flex;
 }
@@ -86,27 +74,76 @@ body {
     cursor: pointer;
 }
 
-.featuresContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-h1 {
-    width: 100%;
-    font-size: 25px;
-    font-weight: lighter;
-    border-bottom: 1px solid rgba(0, 120, 147, 1);
-}
-
 p {
     margin: 5px;
     font-size: 20px;
+}
+
+.infoPanel {
+    width: 50%;
+}
+
+.infoText {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    margin-top: unset;
+    font-weight: unset;
+}
+
+.installButton {
+    display: flex;
+    height: 55px;
+    font-size: 20px;
+    padding: 0 25px;
+    font-weight: bold;
+    width: fit-content;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 120, 147, 1);
+}
+
+.otherBrowsersLink {
+    font-weight: lighter;
+}
+
+.screenshotPanel {
+    width: 50%;
 }
 
 .screenshot {
     width: 100%;
     margin-bottom: 10px;
     border-radius: 15px;
+}
+
+.featuresContainer {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.feature {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid rgba(0, 120, 147, 1);
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+.featureIcon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.featureTitle {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 body::-webkit-scrollbar {

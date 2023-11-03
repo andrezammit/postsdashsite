@@ -2,6 +2,23 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get PostsDash for your browser</title>
+    <meta name="description" content="Install PostsDash, the ultimate browser extension for Twitter / X users! Experience tweets in a visually appealing tiled layout, stay updated with real-time content and enhance your Twitter experience with our user-friendly extension.">
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "PostsDash",
+            "description": "A browser extension to visualize tweets in a tiled layout and shows new tweets automatically.",
+            "url": "https://postsdash.com",
+            "logo": "http://postsdash.com/images/logo.png",
+            "email": "mail@postsdash.com"
+        }
+    </script>
+
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -19,14 +36,49 @@
             </div>
         </div>
         <div class="installContainer">
-            <div class="installButton">Install</div>
+            <div class="infoPanel">
+                <h1 class="infoText">Show tweets in a tiled layout and watch them automatically update!</h1>
+                <div class="installButton">Install</div>
+                <div class="otherBrowsersLink">Other browsers</div>
+            </div>
+            <div class="screenshotPanel">
+                <img class="screenshot" src="images/screenshot.png">
+            </div>
         </div>
         <div class="featuresContainer">
-            <h1>Features</h1>
-            <img class="screenshot" src="images/screenshot.png">
-            <p>Show tweets in a tiled layout and watch them automatically update!</p>
-            <p>Experience your feed in a visually appealing tiled layout that organizes your feed neatly.</p>
-            <p>Stay in the loop with automatic feed refreshing, ensuring you never miss the latest tweets.</p>
+            <div class="feature">
+                <svg class="featureIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-columns">
+                    <path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7m0-18H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7m0-18v18"></path>
+                </svg>
+                <h2 class="featureTitle">Tiled Tweet Layout</h2>
+                <h3 class="featureText">Experience your feed in a visually appealing tiled layout that organizes your feed neatly.</h3>
+            </div>
+            <div class="feature">
+                <svg class="featureIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <polyline points="1 20 1 14 7 14"></polyline>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                </svg>
+                <div class="featureTitle">Real-Time Updates</div>
+                <div class="featureText">Stay in the loop with automatic feed refreshing, ensuring you never miss the latest tweets.</div>
+            </div>
+            <div class="feature">
+                <svg class="featureIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-film">
+                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                    <line x1="7" y1="2" x2="7" y2="22"></line>
+                    <line x1="17" y1="2" x2="17" y2="22"></line>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <line x1="2" y1="7" x2="7" y2="7"></line>
+                    <line x1="2" y1="17" x2="7" y2="17"></line>
+                    <line x1="17" y1="17" x2="22" y2="17"></line>
+                    <line x1="17" y1="7" x2="22" y2="7"></line>
+                </svg>
+                <div class="featureTitle">Multimedia Integration</div>
+                <div class="featureText">Enjoy an enhanced media viewing experience as images, videos, and GIFs are seamlessly integrated into the tiled layout.</div>
+            </div>
         </div>
         <h1>Browsers</h1>
         <div class="browserContainer">
