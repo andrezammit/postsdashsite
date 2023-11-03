@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="128" height="128" viewBox="0 0 128 128" xml:space="preserve">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:rgba(0, 120, 147, 0.4);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgba(0, 120, 147, 1);stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="bar-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:rgb(50,50,50);stop-opacity:1" /> <!-- Dark gray at the top -->
+            <stop offset="50%" style="stop-color:rgb(0,0,0);stop-opacity:1" /> <!-- Black in the middle -->
+            <stop offset="100%" style="stop-color:rgb(30,30,30);stop-opacity:1" /> <!-- Slightly lighter gray at the bottom -->
+        </linearGradient>
+    </defs>
+	<rect x="0" y="0" width="128" height="128" rx="10" fill="#FFFFFF" />
+	<rect x="0" y="0" width="128" height="128" rx="10" fill="url(#gradient)" />
+
+    <rect x="29" y="24" width="20" height="40" fill="url(#bar-gradient)" />
+    <rect x="54" y="24" width="20" height="80" fill="url(#bar-gradient)" />
+    <rect x="79" y="24" width="20" height="60" fill="url(#bar-gradient)" />
+</svg>
