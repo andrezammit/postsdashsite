@@ -21,6 +21,12 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+a {
+    cursor: pointer;
+    text-decoration: unset;
+    color: rgb(247, 249, 249);
+}
+
 .contentArea {
     width: 90%;
     gap: 100px;
@@ -39,7 +45,6 @@ body {
     gap: 15px;
     width: 100%;
     display: flex;
-    cursor: default;
     flex-wrap: wrap;
     flex-direction: row;
     font-family: 'logofont';
@@ -57,7 +62,7 @@ body {
 
 .slogan {
     display: flex;
-    margin-top: -14px;
+    margin-top: -12px;
     font-size: 25.5px;
     margin-right: 5px;
     justify-content: end;
@@ -80,13 +85,23 @@ body {
 }
 
 .browserIcon {
-    width: 75px;
-    margin-right: 20px;
+    height: auto;
+    max-width: 75px;
 }
 
 .browserIcon:hover {
     cursor: pointer;
 }
+
+.socialIcon {
+    gap: 20px;
+    height: auto;
+    max-width: 65px;
+}
+
+/* .socialIcon:hover {
+    background-color: hsl(210, 34%, 20%);
+} */
 
 p {
     margin: 5px;
@@ -138,7 +153,6 @@ h3 {
 }
 
 .otherBrowsersLink {
-    all: unset;
     cursor: pointer;
     width: fit-content;
     font-weight: lighter;
@@ -154,6 +168,7 @@ h3 {
 }
 
 .feature {
+    gap: 20px;
     flex: 1 1 0px;
     padding: 20px;
     min-width: 195px;
@@ -213,11 +228,15 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     .logo {
-        font-size: calc(100% + 13.4vw);
+        font-size: calc(100% + 11.5vw);
     }
     
+    .textContainer {
+        margin-top: -10px;
+    }
+
     .slogan {
-        font-size: calc(100% + 0.9vw);
+        font-size: calc(100% + 0.4vw);
     }
 
     .infoText {

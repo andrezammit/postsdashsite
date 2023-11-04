@@ -26,14 +26,37 @@ function getKeyByValue(object, value) {
     return Object.keys(object).find(key => object[key] === value);
 }
 
-function getInstallButtonText(detectedBrowser) {
-    const detectedBrowserName = getKeyByValue(Browsers, detectedBrowser);
-    return "Install " + detectedBrowserName + " extension";
+function getBrowserLink(detectedBrowser) {
+    switch (detectedBrowser) {
+        case Browsers.Chrome:
+            return "chrome";
+
+        case Browsers.Edge:
+            return "edge";
+
+        case Browsers.Firefox:
+            return "firefox";
+    }
 }
 
-function replaceInstallButtonText(buttonText) {
+function getInstallButtonInfo(detectedBrowser) {
+    const detectedBrowserName = getKeyByValue(Browsers, detectedBrowser);
+    
+    const buttonLink = getBrowserLink(detectedBrowser);
+    const buttonText = "Install " + detectedBrowserName + " extension";
+
+    return { 
+        "link": buttonLink, 
+        "text": buttonText 
+    };
+}
+
+function initInstallButton(installButtonInfo) {
+    const installButtonLink = document.querySelector(".installButtonLink");
+    installButtonLink.setAttribute("href", installButtonInfo.link);
+
     const installButton = document.querySelector(".installButton");
-    installButton.textContent = buttonText;
+    installButton.textContent = installButtonInfo.text;
 }
 
 window.onload = function() {
@@ -41,6 +64,6 @@ window.onload = function() {
 
     console.log("PostsDash: Browser detected: " + getKeyByValue(Browsers, detectedBrowser));
 
-    const installButtonText = getInstallButtonText(detectedBrowser);
-    replaceInstallButtonText(installButtonText);
+    const installButtonInfo = getInstallButtonInfo(detectedBrowser);
+    initInstallButton(installButtonInfo);
 }
