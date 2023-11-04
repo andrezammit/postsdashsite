@@ -86,6 +86,7 @@ a {
 
 .browserIcon {
     height: auto;
+    min-width: 64px;
     max-width: 75px;
 }
 
