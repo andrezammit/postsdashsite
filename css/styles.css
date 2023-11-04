@@ -1,6 +1,7 @@
 :root {
     --sidebar-colour: rgba(0, 120, 147, 1);
     --sidebar-colour-hover: rgb(1, 131, 160);
+    --sidebar-colour-active: rgb(2, 111, 135);
 }
 
 @font-face {
@@ -22,6 +23,7 @@ body {
 
 .contentArea {
     width: 90%;
+    gap: 100px;
     display: flex;
     margin: 0px auto;
     max-width: 1400px;
@@ -30,22 +32,22 @@ body {
 
 .topSpacer,
 .bottomSpacer {
-    height: 100px;
+    height: 0px;
 }
 
 .logoContainer {
-    display: flex;
+    gap: 15px;
     width: 100%;
+    display: flex;
     cursor: default;
-    margin-bottom: 100px;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
     font-family: 'logofont';
+    justify-content: center;
 }
 
 .textContainer {
     display: flex;
-    margin-left: 15px;
     flex-direction: column;
 }
 
@@ -66,7 +68,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 100px;
     justify-content: center;
 }
 
@@ -76,7 +77,6 @@ body {
     gap: 20px;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 100px;
 }
 
 .browserIcon {
@@ -95,13 +95,15 @@ p {
 
 .infoPanel, .screenshotPanel {
     flex: 1;
+    gap: 20px;
     width: 50%;
+    display: flex;
     min-width: 195px;
+    flex-direction: column;
 }
 
 .infoText {
     font-size: 30px;
-    margin-bottom: 20px;
 }
 
 h1,
@@ -115,26 +117,39 @@ h3 {
 .installButton {
     display: flex;
     font-size: 20px;
+    cursor: pointer;
     padding: 15px 25px;
     font-weight: bold;
     width: fit-content;
     border-radius: 15px;
-    margin-bottom: 20px;
     align-items: center;
     height: fit-content;
     justify-content: center;
     background-color: rgba(0, 120, 147, 1);
+    transition: background-color 0.3s ease-out 0s;
+}
+
+.installButton:hover {
+    background-color: var(--sidebar-colour-hover);
+}
+
+.installButton:active {
+    background-color: var(--sidebar-colour-active);
 }
 
 .otherBrowsersLink {
     all: unset;
     cursor: pointer;
+    width: fit-content;
     font-weight: lighter;
+}
+
+.otherBrowsersLink:hover {
+    text-decoration: underline;
 }
 
 .screenshot {
     width: 100%;
-    margin-bottom: 10px;
     border-radius: 15px;
 }
 
@@ -190,4 +205,22 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     /* Handle color on hover */
     background: var(--sidebar-colour-hover);
+}
+
+@media screen and (max-width: 768px) {
+    .contentArea {
+        gap: 50px;
+    }
+
+    .logo {
+        font-size: calc(100% + 13.4vw);
+    }
+    
+    .slogan {
+        font-size: calc(100% + 0.9vw);
+    }
+
+    .infoText {
+        font-size: calc(100% + 1.5vw);
+    }
 }
