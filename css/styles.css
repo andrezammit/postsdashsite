@@ -13,6 +13,7 @@ html {
 }
 
 body {
+    margin: 0px;
     color: rgb(247, 249, 249);
     background-color: hsl(210, 34%, 12%);
     scrollbar-color: var(--sidebar-colour) rgba(0, 0, 0, 0);
@@ -20,9 +21,10 @@ body {
 }
 
 .contentArea {
-    width: 55%;
+    width: 90%;
     display: flex;
     margin: 0px auto;
+    max-width: 1400px;
     flex-direction: column;
 }
 
@@ -60,7 +62,9 @@ body {
 }
 
 .installContainer {
+    gap: 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 100px;
     justify-content: center;
@@ -69,7 +73,9 @@ body {
 .featureContainer,
 .browserContainer,
 .socialContainer {
+    gap: 20px;
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 100px;
 }
 
@@ -87,8 +93,10 @@ p {
     font-size: 20px;
 }
 
-.infoPanel {
+.infoPanel, .screenshotPanel {
+    flex: 1;
     width: 50%;
+    min-width: 195px;
 }
 
 .infoText {
@@ -106,14 +114,14 @@ h3 {
 
 .installButton {
     display: flex;
-    height: 55px;
     font-size: 20px;
-    padding: 0 25px;
+    padding: 15px 25px;
     font-weight: bold;
     width: fit-content;
     border-radius: 15px;
     margin-bottom: 20px;
     align-items: center;
+    height: fit-content;
     justify-content: center;
     background-color: rgba(0, 120, 147, 1);
 }
@@ -124,10 +132,6 @@ h3 {
     font-weight: lighter;
 }
 
-.screenshotPanel {
-    width: 50%;
-}
-
 .screenshot {
     width: 100%;
     margin-bottom: 10px;
@@ -135,11 +139,13 @@ h3 {
 }
 
 .feature {
-    flex: 1;
+    flex: 1 1 0px;
     padding: 20px;
-    border: 1px solid rgba(0, 120, 147, 1);
-    margin-right: 20px;
+    min-width: 195px;
     border-radius: 15px;
+    box-sizing: border-box;
+    width: calc(33.3333% - 20px);
+    border: 1px solid rgba(0, 120, 147, 1);
 }
 
 .centeredIcons {
