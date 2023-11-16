@@ -3,7 +3,8 @@ const Browsers = {
 	Chrome: 1,
 	Edge: 2,
 	Firefox: 3,
-    Safari: 4
+    Safari: 4,
+    Opera: 5
 }
 
 function detectBrowser() {
@@ -15,8 +16,8 @@ function detectBrowser() {
         return Browsers.Chrome;
     } else if (userAgent.indexOf("Firefox/") > -1) {
         return Browsers.Firefox;
-    } else if (userAgent.indexOf("Safari/") > -1) {
-        return Browsers.Safari;
+    } else if (userAgent.indexOf("OPR/") > -1) {
+        return Browsers.Opera;
     } else {
         return Browsers.Unknown;
     }
@@ -36,24 +37,52 @@ function getBrowserLink(detectedBrowser) {
 
         case Browsers.Firefox:
             return "firefox";
+
+        case Browsers.Opera:
+            return "opera";
+
+        default:
+            return "#browsers";
+    }
+}
+
+function getInstallButtonText(detectedBrowser) {
+    switch (detectedBrowser) {
+        case Browsers.Chrome:
+            return "Install Chrome extension";
+
+        case Browsers.Edge:
+            return "Install Edge extension";
+
+        case Browsers.Firefox:
+            return "Install Firefox extension";
+
+        case Browsers.Opera:
+            return "Install Opera extension";
+
+        default:
+            return "Unsupported browser";
     }
 }
 
 function getInstallButtonInfo(detectedBrowser) {
-    const detectedBrowserName = getKeyByValue(Browsers, detectedBrowser);
-    
     const buttonLink = getBrowserLink(detectedBrowser);
-    const buttonText = "Install " + detectedBrowserName + " extension";
+    const buttonText = getInstallButtonText(detectedBrowser);
 
     return { 
         "link": buttonLink, 
-        "text": buttonText 
+        "text": buttonText,
+        "browser": detectedBrowser
     };
 }
 
 function initInstallButton(installButtonInfo) {
     const installButtonLink = document.querySelector(".installButtonLink");
     installButtonLink.setAttribute("href", installButtonInfo.link);
+
+    if (installButtonInfo.browser === Browsers.Unknown) {
+        installButtonLink.removeAttribute("target");
+    }
 
     const installButton = document.querySelector(".installButton");
     installButton.textContent = installButtonInfo.text;

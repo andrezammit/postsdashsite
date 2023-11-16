@@ -243,4 +243,8 @@ body::-webkit-scrollbar-thumb:hover {
     .infoText {
         font-size: calc(100% + 1.5vw);
     }
+
+    .browserIcon {
+        max-width: 64px;
+    }
 }
