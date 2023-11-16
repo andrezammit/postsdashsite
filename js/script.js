@@ -12,12 +12,12 @@ function detectBrowser() {
 
     if (userAgent.indexOf("Edg/") > -1) {
         return Browsers.Edge;
+    } else if (userAgent.indexOf("OPR/") > -1) {
+        return Browsers.Opera;
     } else if (userAgent.indexOf("Chrome/") > -1) {
         return Browsers.Chrome;
     } else if (userAgent.indexOf("Firefox/") > -1) {
         return Browsers.Firefox;
-    } else if (userAgent.indexOf("OPR/") > -1) {
-        return Browsers.Opera;
     } else {
         return Browsers.Unknown;
     }
