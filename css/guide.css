@@ -1,0 +1,137 @@
+.guideMain {
+    padding: 38px 0 72px;
+}
+
+.guideIntro {
+    max-width: 840px;
+    margin: 0 auto 36px;
+}
+
+.guideBreadcrumb {
+    margin-bottom: 40px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.guideIntro h1 {
+    max-width: none;
+    font-size: clamp(2.4rem, 5vw, 4.1rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+}
+
+.guideLead {
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.guideMeta,
+.guideFigure figcaption,
+.guideControls figcaption {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.guideFigure {
+    margin: 0 0 56px;
+}
+
+.guideFigure img {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-medium);
+}
+
+.guideFigure figcaption {
+    max-width: 840px;
+    margin: 14px auto 0;
+}
+
+.guideBody {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+}
+
+.guideBody section {
+    margin-bottom: 44px;
+    scroll-margin-top: 24px;
+}
+
+.guideBody h2 {
+    font-size: clamp(1.65rem, 3vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+.guideBody a,
+.guideBreadcrumb a {
+    color: var(--coral-bright);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.guideBody a:hover,
+.guideBreadcrumb a:hover {
+    color: var(--text);
+}
+
+.guideBody ul {
+    padding-left: 24px;
+}
+
+.guideBody li {
+    margin-bottom: 12px;
+}
+
+.guideBody .guideInstallLinks {
+    display: flex;
+    gap: 8px 28px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.guideControls {
+    display: flex;
+    margin: 28px 0;
+    padding: 20px;
+    gap: 24px;
+    align-items: center;
+    background: var(--surface);
+    border-radius: var(--radius-medium);
+}
+
+.guideControls img {
+    flex: 0 0 48px;
+    width: 48px;
+    height: 205px;
+    object-fit: none;
+    object-position: left bottom;
+    border-radius: 6px;
+}
+
+.guideControls figcaption {
+    max-width: 440px;
+}
+
+.guideEnd {
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+@media (max-width: 640px) {
+    .guideMain {
+        padding-top: 24px;
+    }
+
+    .guideBreadcrumb {
+        margin-bottom: 28px;
+    }
+
+    .guideControls {
+        gap: 16px;
+        padding: 16px;
+    }
+}

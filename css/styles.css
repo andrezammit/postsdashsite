@@ -240,3 +240,14 @@ body::-webkit-scrollbar-thumb { border-radius: 99px; background: var(--coral); }
     html { scroll-behavior: auto; }
     *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
+.guideHomeLink {
+    margin: 28px 0 0;
+    color: var(--coral-bright);
+    line-height: 1.6;
+}
+
+.guideHomeLink a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
